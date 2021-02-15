@@ -8,6 +8,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 COPY remux-amd64 /bin/
+COPY remux_x86_64 /bin/
 COPY ffmpeg /bin/
 COPY remuxscript.sh /bin/
 
