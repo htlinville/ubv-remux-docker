@@ -7,11 +7,7 @@ RUN apt-get update \
  && apt-get install -y wget \
  && rm -rf /var/lib/apt/lists/*
 
-COPY remux-amd64 /bin/remux-amd64
-COPY remux_x86_64 /bin/remux_x86_64
-COPY ffmpeg /bin/ffmpeg
-COPY remuxscript.sh /bin/remuxscript.sh
-
+COPY . /bin
 
 RUN wget https://archive.org/download/ubnt_ubvinfo/ubnt_ubvinfo
 RUN mv ubnt_ubvinfo /bin/ubnt_ubvinfo
